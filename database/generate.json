@@ -1,0 +1,9 @@
+{
+    "outcome_database":{
+        "name":"String",
+        "id":"String|primary_key",
+        "price":"double",
+        "date" : "String",
+        "type" : "String"
+    }
+}
