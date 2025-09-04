@@ -55,11 +55,11 @@ class MainController {
         targetToken:
             'f5UGcgWDQiK8uIlIQ8EUkw:APA91bGEYLEwIw4cTB9HK8IjbtBOb4eWLl8C2Hwg_a5nrDQcn_PvkAFYlE2DZeCYgyE4MCqX0NxBV7_9r_Y1xFq5XWUADECI6ELI8MVh2qkwSJs7WvVdor8rt7',
         config: {
-          'name': 'RenovDulu',
+          'name': 'Dot Test Assignment',
           'version': MainController.appVersion,
-          'author': 'RenovDulu',
-          'description': 'RenovDulu',
-          'package': 'com.renovdulu.app',
+          'author': 'Dot Test Assignment',
+          'description': 'Dot Test Assignment',
+          'package': 'com.example.dot_test',
           'token':
               'f5UGcgWDQiK8uIlIQ8EUkw:APA91bGEYLEwIw4cTB9HK8IjbtBOb4eWLl8C2Hwg_a5nrDQcn_PvkAFYlE2DZeCYgyE4MCqX0NxBV7_9r_Y1xFq5XWUADECI6ELI8MVh2qkwSJs7WvVdor8',
           'platform': Platform.isAndroid ? 'android' : 'ios',

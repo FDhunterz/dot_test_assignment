@@ -1,7 +1,6 @@
 import 'package:dot_test/controllers/main_controller.dart';
 import 'package:dot_test/database/model/outcome_database.dart';
 import 'package:dot_test/material/api/api_helper/model/global_env.dart';
-import 'package:dot_test/material/route/route.dart';
 import 'package:dot_test/material/router/transition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
