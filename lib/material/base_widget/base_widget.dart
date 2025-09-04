@@ -60,8 +60,8 @@ class InitControl extends StatelessWidget {
         if (disableOnPop) {
         } else if (!didPop) {
           final lastRoute = Navigator.of(context).canPop();
-          final lastRoutes = MainController.state.routerDelegate.canGoBack();
-          if (!lastRoute && lastRoutes) {
+          final canGoback = MainController.state.routerDelegate.canGoBack();
+          if (!lastRoute && !canGoback) {
             if (result != 'escape_double_click') {
               _doubleClick();
             }
