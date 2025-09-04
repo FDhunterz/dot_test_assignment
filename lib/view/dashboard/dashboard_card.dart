@@ -69,7 +69,7 @@ class DashboardCard extends StatelessWidget {
 
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          child: Row(spacing: 10, children: [...listdata.map((d) => cardWidget(context, d))]),
+          child: IntrinsicHeight(child: Row(spacing: 10, children: [...listdata.map((d) => cardWidget(context, d))])),
         ),
       ],
     );

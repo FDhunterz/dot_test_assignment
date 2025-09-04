@@ -13,6 +13,7 @@ import 'package:dot_test/models/outcome/outcome_type.dart';
 import 'package:dot_test/view/manage/outcome/manage_outcome_select_type.dart';
 import 'package:flutter/material.dart';
 import 'package:handlerz/handlerz.dart';
+import 'package:sql_query/viewer/controller/sql_viewer_controller.dart';
 part 'manage_outcome_event.dart';
 part 'manage_outcome_params.dart';
 part 'manage_outcome_validation.dart';

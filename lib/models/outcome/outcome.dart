@@ -19,6 +19,15 @@ class Outcome {
     };
   }
 
+  Map<String, String> toJsonUpdate() {
+    return {
+      'name': name ?? '',
+      'price': (price ?? '').toString(),
+      'date': date?.toIso8601String() ?? '',
+      'type': jsonEncode(type?.toJson()),
+    };
+  }
+
   static Outcome fromJson(data) {
     final d = jsonDecode(data['type']);
     return Outcome(

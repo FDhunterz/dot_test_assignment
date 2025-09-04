@@ -63,6 +63,32 @@ class ManageOutcomeForm extends StatelessWidget {
                   title: 'Simpan',
                   color: controller.validateAll() ? Color(0xff0A97B0) : Color(0xffE0E0E0),
                 ),
+              if (controller.editData != null)
+                Row(
+                  children: [
+                    Expanded(
+                      child: MaterialXButton(
+                        active: controller.validateAll(),
+                        onTap: () {
+                          controller.hapus(controller.editData!);
+                        },
+                        title: 'Delete',
+                        color: Color(0xffEB5757),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: MaterialXButton(
+                        active: controller.validateAll(),
+                        onTap: () {
+                          controller.update(controller.editData!);
+                        },
+                        title: 'Update',
+                        color: controller.validateAll() ? Color(0xff0A97B0) : Color(0xffE0E0E0),
+                      ),
+                    ),
+                  ],
+                ),
             ],
           ),
         );

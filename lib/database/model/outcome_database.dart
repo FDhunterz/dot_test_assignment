@@ -33,4 +33,17 @@ class OutcomeDatabase {
     q.data(data.toJson()); // add your data here
     return await q.insert();
   }
+
+  static Future<List<Map<String, dynamic>>> update(Outcome data) async {
+    final q = DB.table(table);
+    q.data(data.toJsonUpdate());
+    q.where(id, '=', data.id);
+    return await q.update();
+  }
+
+  static Future<List<Map<String, dynamic>>> delete(Outcome data) async {
+    final q = DB.table(table);
+    q.where(id, '=', data.id);
+    return await q.delete();
+  }
 }
