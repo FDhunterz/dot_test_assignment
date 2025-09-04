@@ -38,6 +38,7 @@ class InitControl extends StatelessWidget {
   final VoidCallback? onTapScreen;
   final Function? onBackPressed;
   final Widget? baseClass;
+  final bool disableOnPop;
 
   const InitControl({
     super.key,
@@ -48,6 +49,7 @@ class InitControl extends StatelessWidget {
     this.delayPop,
     this.onBackPressed,
     this.baseClass,
+    this.disableOnPop = true,
   });
 
   @override
@@ -55,10 +57,11 @@ class InitControl extends StatelessWidget {
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, result) {
-        if (!didPop) {
+        if (disableOnPop) {
+        } else if (!didPop) {
           final lastRoute = Navigator.of(context).canPop();
           final lastRoutes = MainController.state.routerDelegate.canGoBack();
-          if (!lastRoute && !lastRoutes) {
+          if (!lastRoute && lastRoutes) {
             if (result != 'escape_double_click') {
               _doubleClick();
             }

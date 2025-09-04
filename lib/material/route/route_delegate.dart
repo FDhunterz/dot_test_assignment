@@ -50,7 +50,7 @@ class MyRouterDelegate extends RouterDelegate<MyRoutePath>
 
   // Fungsi untuk mengecek apakah bisa kembali
   bool canGoBack() {
-    return _routeHistory.isNotEmpty;
+    return _routeHistory.isNotEmpty || _routeHistory.length == 1;
   }
 
   // Fungsi untuk mendapatkan route sebelumnya

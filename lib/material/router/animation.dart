@@ -16,22 +16,22 @@ class CustomPage extends Page {
       case TransitionType.none:
         return MaterialPageRoute(
           settings: this,
-          builder: (_) => InitControl(doubleClick: true, child: child),
+          builder: (_) => InitControl(disableOnPop: false, doubleClick: true, child: child),
         );
       case TransitionType.fade:
         return FadePageRoute(
           settings: this,
-          child: InitControl(doubleClick: true, child: child),
+          child: InitControl(disableOnPop: false, doubleClick: true, child: child),
         );
       case TransitionType.slide:
         return SlidePageRoute(
           settings: this,
-          child: InitControl(doubleClick: true, child: child),
+          child: InitControl(disableOnPop: false, doubleClick: true, child: child),
         );
       case TransitionType.scale:
         return ScalePageRoute(
           settings: this,
-          child: InitControl(doubleClick: true, child: child),
+          child: InitControl(disableOnPop: false, doubleClick: true, child: child),
         );
     }
   }
